@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Fascinate;
+    src: url(./FascinateInline-Regular.ttf);
+}
+
+:root {
+    --red : red;
+}
+
+* {
+    font-family: Fascinate;
+}
+
+
+#shadow-red {
+    box-shadow: 5px 5px 10px var(--red);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+#container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#container-flex > div {
+    width: 18%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Media Query untuk layar tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #container-flex {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    #container-flex > div {
+        width: 45%;
+        height: 150px;
+    }
+}
+
+/* Media Query untuk layar ponsel (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    #container-flex {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #container-flex > div {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Media Query untuk layar sangat lebar (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    #container-flex {
+        justify-content: space-around;
+    }
+
+    #container-flex > div {
+        width: 15%;
+        height: 120px;
+        border: 2px solid black;
+    }
+
+    #shadow-red {
+        box-shadow: 10px 10px 20px red;
+    }
+}
